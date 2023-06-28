@@ -843,7 +843,25 @@ class Character extends FlxSprite
 				antialiasing = false;
 		
 				playAnim('idle');
+			case 'homer':
+				frames = Paths.getSparrowAtlas('homer/Homer', 'shared');
+				
+				animation.addByPrefix('idle', 'Idle', 24, false);
+				for (anim in ['left', 'down', 'up', 'right'])
+				{
+					animation.addByPrefix('sing${anim.toUpperCase()}', anim, 24, false);
+				}
+				loadOffsetFile(curCharacter);
+				
+				globalOffset = [0, 0];
+				
+				barColor = FlxColor.fromRGB(255, 255, 0);
 
+				setGraphicSize(Std.int((width * 2) / furiosityScale));
+				updateHitbox();
+				antialiasing = false;
+		
+				playAnim('idle');
 			case 'bambi-new':
 				frames = Paths.getSparrowAtlas('bambi/bambiRemake', 'shared');
 				animation.addByPrefix('idle', 'bambi idle', 24, false);

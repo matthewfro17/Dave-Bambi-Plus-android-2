@@ -88,6 +88,7 @@ class FreeplayState extends MusicBeatState
 		0xFFCC5555,    // Electric-Cockaldoodledoo
 		0xFF008E00,    // longnosejohn
 		0xFFFFFFFF,    // cuzsiee
+		0xFFFFFF00,    // homer
     ];
 	public static var skipSelect:Array<String> = 
 	[
@@ -140,7 +141,8 @@ class FreeplayState extends MusicBeatState
 		'secret-mod-leak',
 		'vs-dave-thanksgiving',
 		'bonkers',
-		'duper'
+		'duper',
+		'homerdimensional'
 	];
 
 	private var camFollow:FlxObject;
@@ -410,6 +412,7 @@ class FreeplayState extends MusicBeatState
 				addWeek(['Confronting-Yourself'], 4, ['tristan-festival']);
 				addWeek(['Cob', 'Super-Saiyan'], 1, ['dave', 'dave-annoyed']);
 				addWeek(['Foolhardy'], 2, ['zardyMyBeloved']);
+				addWeek(['Homerdimensional'], 21, ['homer']);
 				if (FlxG.save.data.electricCockaldoodledooUnlocked)
 					addWeek(['Cuzsie-X-Kapi-Shipping-Cute'], 20, ['cuzsiee']);
 			case 'terminal':
